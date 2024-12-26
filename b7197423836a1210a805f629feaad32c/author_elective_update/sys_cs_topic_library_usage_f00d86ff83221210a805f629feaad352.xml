@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="DELETE">
+        <calling_cs_topic_id display_value="Submit a request">240d86ff83221210a805f629feaad313</calling_cs_topic_id>
+        <library_cs_topic_id display_value="Deflection">7fb4ca055303201033cdddeeff7b12b3</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"Deflection","library_topic_id":"7fb4ca055303201033cdddeeff7b12b3","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"deflection_configuration","value":{"type":"String","mode":"string","value":"5292005253213010000dddeeff7b126c"},"metadata":{"type":"Reference","list":false,"items":[],"use_items":false,"table":"ssa_deflection_configuration"}},{"parameter-name":"deflection_pattern","value":{"type":"String","mode":"string","value":"f063885253213010000dddeeff7b1221"},"metadata":{"type":"Reference","list":false,"items":[],"use_items":false,"table":"ssa_deflection_pattern"}},{"parameter-name":"activity_table","value":{"type":"String","mode":"string","value":"{{vaInputs.record_table}}"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"activity_ids","value":{"type":"String","mode":"string","value":"{{vaInputs.record_id}}"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}}],"return-value-mappings":[],"header_card_fields":[],"id":"7fa0be44e1ba4e949055b0651005f118","name":"Deflection: Request Complete","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
+        <node_id>7fa0be44e1ba4e949055b0651005f118</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:09:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f00d86ff83221210a805f629feaad352</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_f00d86ff83221210a805f629feaad352</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:09:07</sys_updated_on>
+    </sys_cs_topic_library_usage>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</application>
+        <file_path/>
+        <instance_id>54b947d51b0d465077c7cb7b234bcb6e</instance_id>
+        <instance_name>dev244731</instance_name>
+        <name>sys_cs_topic_library_usage_f00d86ff83221210a805f629feaad352</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage"><sys_cs_topic_library_usage action="INSERT_OR_UPDATE"><calling_cs_topic_id display_value="Submit a request">240d86ff83221210a805f629feaad313</calling_cs_topic_id><library_cs_topic_id display_value="Deflection">7fb4ca055303201033cdddeeff7b12b3</library_cs_topic_id><library_usage>{"type":"LibraryCall","library_topic_name":"Deflection","library_topic_id":"7fb4ca055303201033cdddeeff7b12b3","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"deflection_configuration","value":{"type":"String","mode":"string","value":"5292005253213010000dddeeff7b126c"},"metadata":{"type":"Reference","list":false,"items":[],"use_items":false,"table":"ssa_deflection_configuration"}},{"parameter-name":"deflection_pattern","value":{"type":"String","mode":"string","value":"f063885253213010000dddeeff7b1221"},"metadata":{"type":"Reference","list":false,"items":[],"use_items":false,"table":"ssa_deflection_pattern"}},{"parameter-name":"activity_table","value":{"type":"String","mode":"string","value":"{{vaInputs.record_table}}"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"activity_ids","value":{"type":"String","mode":"string","value":"{{vaInputs.record_id}}"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}}],"return-value-mappings":[],"header_card_fields":[],"id":"7fa0be44e1ba4e949055b0651005f118","name":"Deflection: Request Complete","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage><node_id>7fa0be44e1ba4e949055b0651005f118</node_id><sys_class_name>sys_cs_topic_library_usage</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-25 09:09:07</sys_created_on><sys_domain>global</sys_domain><sys_id>f00d86ff83221210a805f629feaad352</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package><sys_policy/><sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope><sys_update_name>sys_cs_topic_library_usage_f00d86ff83221210a805f629feaad352</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-25 09:09:07</sys_updated_on></sys_cs_topic_library_usage></record_update>]]></payload>
+        <payload_hash>-1590359714</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>ff197423836a1210a805f629feaad32e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:09:07</sys_created_on>
+        <sys_id>b00d86ff83221210a805f629feaad354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193fd13b49d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:09:07</sys_updated_on>
+        <type>Topic Library Usage</type>
+        <update_guid>b40d86ffd4221210e83e6c8b1dc96553</update_guid>
+        <update_guid_history>b40d86ffd4221210e83e6c8b1dc96553:-1590359714</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:09:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_cs_topic_library_usage">sys_cs_topic_library_usage</sys_db_object>
+        <sys_id>08317c464eb84298b18a4ed94d318f41</sys_id>
+        <sys_metadata>f00d86ff83221210a805f629feaad352</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_scope_delete display_value="">740db0cfe6364fb4813c9c99f4bd5610</sys_scope_delete>
+        <sys_update_name>sys_cs_topic_library_usage_f00d86ff83221210a805f629feaad352</sys_update_name>
+        <sys_update_version display_value="sys_cs_topic_library_usage_f00d86ff83221210a805f629feaad352">b00d86ff83221210a805f629feaad354</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:09:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

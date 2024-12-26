@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="DELETE">
+        <calling_cs_topic_id display_value="Submit a request">240d86ff83221210a805f629feaad313</calling_cs_topic_id>
+        <library_cs_topic_id display_value="Search Catalog Item">ccaacd71c3a3330012d1758a7ff57ecd</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"Search Catalog Item","library_topic_id":"ccaacd71c3a3330012d1758a7ff57ecd","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"catalogs","value":{"type":"String","mode":"script","value":"(function execute() {\n    function getCatalogM2M(portalId) {\n        var gr = new GlideRecord('m2m_sp_portal_catalog');\n        if (gr.isValid()) {\n            gr.addActiveQuery();\n            gr.addQuery('sp_portal', portalId);\n            gr.addQuery('sc_catalog.active', true);\n            gr.orderBy('order');\n            gr.orderBy('sc_catalog.active');\n        }\n        else {\n            gr = new GlideRecord('sp_portal');\n            gr.addQuery('sys_id', portalId);\n        }\n        gr.setWorkflow(false)\n        gr.query();\n        return gr;\n    }\n    var suffix = vaVars.portalName;\n    if (suffix) {\n        var catalogs = \"\";\n        var gr = new GlideRecord('sp_portal');\n        gr.addQuery('url_suffix', suffix);\n        gr.setWorkflow(false)\n        gr.query();\n        gr.next();\n        var portalId = gr.getUniqueValue();\n        vaVars.portalId = portalId;\n        var m2mGR = getCatalogM2M(portalId);\n        if (m2mGR.getRowCount() &gt; 0) {\n            m2mGR.next();\n            catalogs += m2mGR.getValue('sc_catalog');\n            while (m2mGR.next()) {\n                catalogs += ',';\n                catalogs += m2mGR.getValue('sc_catalog')\n\n            }\n        }\n        return catalogs;\n    }\n    return '';\n})()\n"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"query_term","value":{"type":"String","mode":"script","value":"(function execute() {\n    if (vaVars.search_catalogitem != '' &amp;&amp; !vaVars.search_again)\n        return vaVars.search_catalogitem\n\n    if (vaVars.search_hardware != '')\n        return vaVars.search_hardware\n    else if (vaVars.search_software != '')\n        return vaVars.search_software\n    else if (vaInputs.search != '')\n        return vaInputs.search\n\n})()\n"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"result_limit","value":{"type":"String","mode":"string","value":"5"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}}],"return-value-mappings":[{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"catalog_item_id","main_topic_mapped_variable_name":"catalog_item_id"},{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"item_type","main_topic_mapped_variable_name":"item_type"},{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"is_conversational","main_topic_mapped_variable_name":"is_conversational"}],"header_card_fields":[],"id":"94605a26f9ac4b3685c24a0c8affdfc0","name":"Search Catalog Item","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"(function execute() {\n    return vaVars.search_again || !vaVars.catalog_item_id;\n})()\n"},"expert_mode":false}</library_usage>
+        <node_id>94605a26f9ac4b3685c24a0c8affdfc0</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:09:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3c0d86ff83221210a805f629feaad333</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_3c0d86ff83221210a805f629feaad333</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:09:07</sys_updated_on>
+    </sys_cs_topic_library_usage>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</application>
+        <file_path/>
+        <instance_id>54b947d51b0d465077c7cb7b234bcb6e</instance_id>
+        <instance_name>dev244731</instance_name>
+        <name>sys_cs_topic_library_usage_3c0d86ff83221210a805f629feaad333</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage"><sys_cs_topic_library_usage action="INSERT_OR_UPDATE"><calling_cs_topic_id display_value="Submit a request">240d86ff83221210a805f629feaad313</calling_cs_topic_id><library_cs_topic_id display_value="Search Catalog Item">ccaacd71c3a3330012d1758a7ff57ecd</library_cs_topic_id><library_usage>{"type":"LibraryCall","library_topic_name":"Search Catalog Item","library_topic_id":"ccaacd71c3a3330012d1758a7ff57ecd","library_topic_is_template":false,"parameter-mappings":[{"parameter-name":"catalogs","value":{"type":"String","mode":"script","value":"(function execute() {\n    function getCatalogM2M(portalId) {\n        var gr = new GlideRecord('m2m_sp_portal_catalog');\n        if (gr.isValid()) {\n            gr.addActiveQuery();\n            gr.addQuery('sp_portal', portalId);\n            gr.addQuery('sc_catalog.active', true);\n            gr.orderBy('order');\n            gr.orderBy('sc_catalog.active');\n        }\n        else {\n            gr = new GlideRecord('sp_portal');\n            gr.addQuery('sys_id', portalId);\n        }\n        gr.setWorkflow(false)\n        gr.query();\n        return gr;\n    }\n    var suffix = vaVars.portalName;\n    if (suffix) {\n        var catalogs = \"\";\n        var gr = new GlideRecord('sp_portal');\n        gr.addQuery('url_suffix', suffix);\n        gr.setWorkflow(false)\n        gr.query();\n        gr.next();\n        var portalId = gr.getUniqueValue();\n        vaVars.portalId = portalId;\n        var m2mGR = getCatalogM2M(portalId);\n        if (m2mGR.getRowCount() &gt; 0) {\n            m2mGR.next();\n            catalogs += m2mGR.getValue('sc_catalog');\n            while (m2mGR.next()) {\n                catalogs += ',';\n                catalogs += m2mGR.getValue('sc_catalog')\n\n            }\n        }\n        return catalogs;\n    }\n    return '';\n})()\n"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"query_term","value":{"type":"String","mode":"script","value":"(function execute() {\n    if (vaVars.search_catalogitem != '' &amp;&amp; !vaVars.search_again)\n        return vaVars.search_catalogitem\n\n    if (vaVars.search_hardware != '')\n        return vaVars.search_hardware\n    else if (vaVars.search_software != '')\n        return vaVars.search_software\n    else if (vaInputs.search != '')\n        return vaInputs.search\n\n})()\n"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}},{"parameter-name":"result_limit","value":{"type":"String","mode":"string","value":"5"},"metadata":{"type":"String","list":false,"items":[],"use_items":false}}],"return-value-mappings":[{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"catalog_item_id","main_topic_mapped_variable_name":"catalog_item_id"},{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"item_type","main_topic_mapped_variable_name":"item_type"},{"main_topic_variable_namespace":"vaInputs","library_topic_return_parameter_name":"is_conversational","main_topic_mapped_variable_name":"is_conversational"}],"header_card_fields":[],"id":"94605a26f9ac4b3685c24a0c8affdfc0","name":"Search Catalog Item","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"(function execute() {\n    return vaVars.search_again || !vaVars.catalog_item_id;\n})()\n"},"expert_mode":false}</library_usage><node_id>94605a26f9ac4b3685c24a0c8affdfc0</node_id><sys_class_name>sys_cs_topic_library_usage</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-25 09:09:07</sys_created_on><sys_domain>global</sys_domain><sys_id>3c0d86ff83221210a805f629feaad333</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package><sys_policy/><sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope><sys_update_name>sys_cs_topic_library_usage_3c0d86ff83221210a805f629feaad333</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-25 09:09:07</sys_updated_on></sys_cs_topic_library_usage></record_update>]]></payload>
+        <payload_hash>-1805617891</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>ff197423836a1210a805f629feaad32e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:09:07</sys_created_on>
+        <sys_id>380d86ff83221210a805f629feaad336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193fd13b44d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:09:07</sys_updated_on>
+        <type>Topic Library Usage</type>
+        <update_guid>f80d86ff2f22121063f20feef89c8135</update_guid>
+        <update_guid_history>f80d86ff2f22121063f20feef89c8135:-1805617891</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 09:09:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_cs_topic_library_usage">sys_cs_topic_library_usage</sys_db_object>
+        <sys_id>2a5e662e380d432c96d623494a207361</sys_id>
+        <sys_metadata>3c0d86ff83221210a805f629feaad333</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_scope_delete display_value="">740db0cfe6364fb4813c9c99f4bd5610</sys_scope_delete>
+        <sys_update_name>sys_cs_topic_library_usage_3c0d86ff83221210a805f629feaad333</sys_update_name>
+        <sys_update_version display_value="sys_cs_topic_library_usage_3c0d86ff83221210a805f629feaad333">380d86ff83221210a805f629feaad336</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-25 09:09:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
