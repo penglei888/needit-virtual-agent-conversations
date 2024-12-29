@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__b1ea265224a14a069617a1af6e04d840">70fa590183b69610a805f629feaad39e</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"7479ea4116ee4f36b0fe14c1f4ef6109","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"7479ea4116ee4f36b0fe14c1f4ef6109"}],"goals":[{"name":"primary","trigger_id":"7479ea4116ee4f36b0fe14c1f4ef6109","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"I can help you apply for a student loan!\", vaContext.getRequesterLang())"},"id":"b8eabb76b27948939eb148887666ab88","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f643725ee54e4171924c70c6c0032a16","name":"End","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Tuition and other education expenses can be high, so we partnered with Sallie Mae to offer Lendyr members our Student Loan.  This loan is an ideal solution to help you pay for college expenses not covered by scholarships and federal loans.\", vaContext.getRequesterLang())"}],"request_feedback":true,"id":"62a8baaabe1542a5928bf8e01de66342","name":"step1","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Are you interested in applying for a student loan?\", vaContext.getRequesterLang())"}],"request_feedback":true,"id":"7aba9eaae1844876afe3428115f31b5f","name":"step2","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"InputPrompt","variable_id":"1eeffb51689240bba9b72cf41cabf811","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Are you interested in applying for a student loan?\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"862d160ffc594624be75e6adfe9c8f59","name":"step2","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"description":""},{"type":"TerminateGoal","goal_id":"primary","id":"af4bef907bae48c3bd7a8db15dc02fc9","name":"ImplicitEnd__54998b9a9d36438c86c7e13f1a08af69","expert_mode":false},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"step2=true"},"id":"aa47ce5575634f0db5b3832b4cc7d5e8","name":"No","expert_mode":false},{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"step2=false"},"id":"4843a46c234644938b5402cd9b1e2239","name":"Yes","expert_mode":false}],"id":"8987f3b0c154431194ef8dcab426db1e","goal_id":"primary","expert_mode":false}],"edges":[{"type":"Edge","source_node_id":"8987f3b0c154431194ef8dcab426db1e","target_node_id":"f643725ee54e4171924c70c6c0032a16","branch_id":"aa47ce5575634f0db5b3832b4cc7d5e8","id":"1fdb0edbcfc846ac9258c9cf53be828d","name":"aa47ce5575634f0db5b3832b4cc7d5e8"},{"type":"Edge","source_node_id":"8987f3b0c154431194ef8dcab426db1e","target_node_id":"af4bef907bae48c3bd7a8db15dc02fc9","branch_id":"4843a46c234644938b5402cd9b1e2239","id":"4497d548b05d401db739404a69371e6a","name":"4843a46c234644938b5402cd9b1e2239"},{"type":"Edge","source_node_id":"b8eabb76b27948939eb148887666ab88","target_node_id":"62a8baaabe1542a5928bf8e01de66342","id":"894ec6158cba41b5b4ebd85bd047d821"},{"type":"Edge","source_node_id":"62a8baaabe1542a5928bf8e01de66342","target_node_id":"7aba9eaae1844876afe3428115f31b5f","id":"ae55c8f8dca34088a0301ca6494f5d9b"},{"type":"Edge","source_node_id":"7aba9eaae1844876afe3428115f31b5f","target_node_id":"862d160ffc594624be75e6adfe9c8f59","id":"c00453c9747745499082344951e2cbb9"},{"type":"Edge","source_node_id":"862d160ffc594624be75e6adfe9c8f59","target_node_id":"8987f3b0c154431194ef8dcab426db1e","id":"adfb6e6160d34793a09bfe66379a8a0b"}],"id":"primary"}],"script_variables":[{"type":"String","name":"LiveAgent_application","value":{"type":"String","mode":"string"},"list":false,"id":"55648866299f4e87be6b532a35a9bf3d","formatType":"text","secure":false,"sensitive":false,"aiInput":false}],"glide_variables":[{"type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"True/False","id":"1eeffb51689240bba9b72cf41cabf811","name":"step2","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"b7197423836a1210a805f629feaad32c","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"1df8510983369610a805f629feaad39f","name":"_PRVW__b1ea265224a14a069617a1af6e04d840","key_phrases":["Applying for a student loan","loan","apply"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[{"name":null,"visible":false,"sysId":"9759302b836a1210a805f629feaad321"}],"triggerable_by_notification":false,"description":"Applying for a student loan for demo","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Applying for a student loan","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>1df8510983369610a805f629feaad39f</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.68",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b8eabb76b27948939eb148887666ab88": {
+          "id": "b8eabb76b27948939eb148887666ab88",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you apply for a student loan!"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "f643725ee54e4171924c70c6c0032a16": {
+          "id": "f643725ee54e4171924c70c6c0032a16",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "62a8baaabe1542a5928bf8e01de66342": {
+          "id": "62a8baaabe1542a5928bf8e01de66342",
+          "stepType": "TextOutput",
+          "name": "step1",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Tuition and other education expenses can be high, so we partnered with Sallie Mae to offer Lendyr members our Student Loan.  This loan is an ideal solution to help you pay for college expenses not covered by scholarships and federal loans."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "81fe82c7de0e4f1eba7951ac7ddc0110"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "7aba9eaae1844876afe3428115f31b5f": {
+          "id": "7aba9eaae1844876afe3428115f31b5f",
+          "stepType": "TextOutput",
+          "name": "step2",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Are you interested in applying for a student loan?"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "520d19ed7e854b93b8970c2a2aa2ab30"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "862d160ffc594624be75e6adfe9c8f59": {
+          "id": "862d160ffc594624be75e6adfe9c8f59",
+          "stepType": "BooleanPrompt",
+          "name": "step2",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Are you interested in applying for a student loan?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "1eeffb51689240bba9b72cf41cabf811",
+          "detailDescription": ""
+        },
+        "af4bef907bae48c3bd7a8db15dc02fc9": {
+          "id": "af4bef907bae48c3bd7a8db15dc02fc9",
+          "stepType": "ImplicitEnd"
+        },
+        "8987f3b0c154431194ef8dcab426db1e": {
+          "id": "8987f3b0c154431194ef8dcab426db1e",
+          "stepType": "Decision",
+          "name": "Decision"
+        }
+      },
+      "edges": [
+        {
+          "id": "1fdb0edbcfc846ac9258c9cf53be828d",
+          "edgeType": "Branch",
+          "source": "8987f3b0c154431194ef8dcab426db1e",
+          "target": "f643725ee54e4171924c70c6c0032a16",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.step2=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "4497d548b05d401db739404a69371e6a",
+          "edgeType": "Branch",
+          "source": "8987f3b0c154431194ef8dcab426db1e",
+          "target": "af4bef907bae48c3bd7a8db15dc02fc9",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.step2=false",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "894ec6158cba41b5b4ebd85bd047d821",
+          "edgeType": "Edge",
+          "source": "b8eabb76b27948939eb148887666ab88",
+          "target": "62a8baaabe1542a5928bf8e01de66342",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ae55c8f8dca34088a0301ca6494f5d9b",
+          "edgeType": "Edge",
+          "source": "62a8baaabe1542a5928bf8e01de66342",
+          "target": "7aba9eaae1844876afe3428115f31b5f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c00453c9747745499082344951e2cbb9",
+          "edgeType": "Edge",
+          "source": "7aba9eaae1844876afe3428115f31b5f",
+          "target": "862d160ffc594624be75e6adfe9c8f59",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "adfb6e6160d34793a09bfe66379a8a0b",
+          "edgeType": "Edge",
+          "source": "862d160ffc594624be75e6adfe9c8f59",
+          "target": "8987f3b0c154431194ef8dcab426db1e",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "55648866299f4e87be6b532a35a9bf3d": {
+      "id": "55648866299f4e87be6b532a35a9bf3d",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": null
+      },
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "1eeffb51689240bba9b72cf41cabf811": {
+      "id": "1eeffb51689240bba9b72cf41cabf811",
+      "name": "step2",
+      "label": "Step2",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs",
+      "nodeId": "862d160ffc594624be75e6adfe9c8f59",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>_PRVW__b1ea265224a14a069617a1af6e04d840</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 02:42:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fcfa590183b69610a805f629feaad3a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cb_design_topic_fcfa590183b69610a805f629feaad3a1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 02:42:47</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

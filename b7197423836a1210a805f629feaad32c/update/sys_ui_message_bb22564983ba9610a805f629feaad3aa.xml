@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>va:topic:1df8510983369610a805f629feaad39f:node:e0596cddb972421b8735e0dbcd9cc486:field:0</key>
+        <language>en</language>
+        <message>You got it!  I've sent your new debit card details and shipping confirmation to your email address on file.  Thank you for choosing Lendyr!</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 06:44:07</sys_created_on>
+        <sys_id>bb22564983ba9610a805f629feaad3aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>va:topic:1df8510983369610a805f629feaad39f:node:e0596cddb972421b8735e0dbcd9cc486:field:0</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_ui_message_bb22564983ba9610a805f629feaad3aa</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 06:44:07</sys_updated_on>
+    </sys_ui_message>
+</record_update>

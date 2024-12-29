@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>9759302b836a1210a805f629feaad321</category>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>New debit card for demo</description>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.68",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b8eabb76b27948939eb148887666ab88": {
+          "id": "b8eabb76b27948939eb148887666ab88",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you apply for a debit card!"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "f643725ee54e4171924c70c6c0032a16": {
+          "id": "f643725ee54e4171924c70c6c0032a16",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Have a nice day!"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "58263c8106704e1abe0295a52dac19f3": {
+          "name": "Which account should we connect to this ",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Let's get you a new debit card.  Which account should we connect to this card?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "e19e8f3210ab4453b3c42bb3bb5bfda1",
+          "detailDescription": "",
+          "id": "58263c8106704e1abe0295a52dac19f3",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "49cb8d5bbae74536a8ce3ebf176c7f0c": {
+          "id": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "f9896870fd724556886f24f2117bc3bf": {
+          "name": "What type of account would you like to o",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What type of account would you like to open?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "fe81ba7cfd7148428f42da6745e43c81",
+          "detailDescription": "",
+          "id": "f9896870fd724556886f24f2117bc3bf",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "26c4c0b152d74126b9a3a04456020655": {
+          "id": "26c4c0b152d74126b9a3a04456020655",
+          "stepType": "TextOutput",
+          "name": "Your account",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Your account has been opened!"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Account type: "
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.what_type_of_account_would_you_like_to_o}}",
+                        "displayValue": "Input Variables➛What Type Of Account Would You Like To O"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "p",
+                  "children": [
+                    {
+                      "text": "Acco﻿unt number: 1259289656"
+                    }
+                  ]
+                },
+                {
+                  "type": "p",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "b78f1e0de80b4744a2112e63e2e899d3"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "7c6fea1fa73d440a8109a9ab355b539e": {
+          "name": "Keep or Replace",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I checked my records, and I see that you have a debit card ending in 6543 associated with the account "
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.which_account_should_we_connect_to_this_}}",
+                      "displayValue": "Input Variables➛Which Account Should We Connect To This "
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": "  Would you like the new debit card to "
+                  },
+                  {
+                    "text": "replace",
+                    "bold": true
+                  },
+                  {
+                    "text": " the debit card ending in 6543, or would you like to associate the new card the the account "
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.which_account_should_we_connect_to_this_}}",
+                      "displayValue": "Input Variables➛Which Account Should We Connect To This "
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": "  "
+                  },
+                  {
+                    "text": "in addition",
+                    "bold": true
+                  },
+                  {
+                    "text": " to the debit card ending in 6543?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "678b295e1a7e438a944e2a7bce0eef7f",
+          "detailDescription": "",
+          "id": "7c6fea1fa73d440a8109a9ab355b539e",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "6b9ff89b98e642be8df42da1f3dded24": {
+          "id": "6b9ff89b98e642be8df42da1f3dded24",
+          "stepType": "BooleanPrompt",
+          "name": "Are you sure to open a new account",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Are you sure to open a new account?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "ba360df9be5b4cccbe9b1ea795f461ac",
+          "detailDescription": ""
+        },
+        "86986339d8cc4581930104677b406188": {
+          "id": "86986339d8cc4581930104677b406188",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "c55909f4df244e00b1a095968971a0d3": {
+          "id": "c55909f4df244e00b1a095968971a0d3",
+          "stepType": "TextOutput",
+          "name": "Great",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Great! Let's get that done..."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "29d49fe46131437e9a6e5071c5c897fd"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "e0596cddb972421b8735e0dbcd9cc486": {
+          "id": "e0596cddb972421b8735e0dbcd9cc486",
+          "stepType": "TextOutput",
+          "name": "send",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "You got it!  I've sent your new debit card details and shipping confirmation to your email address on file.  Thank you for choosing Lendyr!"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "16cf64fc69a54279a5597b0fdb5e5ea3"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "43817872cc7047c5bc0016002126963c": {
+          "name": "anything else",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Are there anything else I can do for you?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "df52ef361b9f443fad480024f58fa28e",
+          "detailDescription": "",
+          "id": "43817872cc7047c5bc0016002126963c",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "e4ae06f772b14947ab72f8b0d6076ae5": {
+          "id": "e4ae06f772b14947ab72f8b0d6076ae5",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "10eef7d9125840228ccac5ffa1a39280": {
+          "id": "10eef7d9125840228ccac5ffa1a39280",
+          "stepType": "TextOutput",
+          "name": "visit our site",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Visit our "
+                    }
+                  ]
+                },
+                {
+                  "type": "a",
+                  "label": "SafeBanking program's joint account page",
+                  "openLinkInNewTab": true,
+                  "url": "https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "link",
+                      "url": "https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html",
+                      "children": [
+                        {
+                          "text": "SafeBanking program's joint account page"
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": " to learn more!"
+                    }
+                  ]
+                },
+                {
+                  "type": "a",
+                  "label": "SafeBanking program's joint account page",
+                  "openLinkInNewTab": true,
+                  "url": "https://www.ibm.com/products/watson-assistant/demos/lendyr/demo.html",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "ce41e42ef0a04e8797599e1b533fc703"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "825c9fef789c4077b1e2549116fd035c",
+          "edgeType": "Branch",
+          "source": "86986339d8cc4581930104677b406188",
+          "target": "26c4c0b152d74126b9a3a04456020655",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.are_you_sure_to_open_a_new_account=true",
+            "mode": "query"
+          },
+          "label": "true"
+        },
+        {
+          "id": "2ce9306bcce54175959602ad19664447",
+          "edgeType": "Branch",
+          "source": "86986339d8cc4581930104677b406188",
+          "target": "58263c8106704e1abe0295a52dac19f3",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.are_you_sure_to_open_a_new_account=false",
+            "mode": "query"
+          },
+          "label": "false"
+        },
+        {
+          "id": "950adab38622406c963e661ed6125dcf",
+          "edgeType": "Edge",
+          "source": "26c4c0b152d74126b9a3a04456020655",
+          "target": "43817872cc7047c5bc0016002126963c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "894ec6158cba41b5b4ebd85bd047d821",
+          "edgeType": "Edge",
+          "source": "b8eabb76b27948939eb148887666ab88",
+          "target": "58263c8106704e1abe0295a52dac19f3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a9ff72c362f44cfbbd981d01220fcccc",
+          "edgeType": "Edge",
+          "source": "58263c8106704e1abe0295a52dac19f3",
+          "target": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d26048de58a548d5aab0ef58fefc8901",
+          "edgeType": "Branch",
+          "source": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "target": "f9896870fd724556886f24f2117bc3bf",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.which_account_should_we_connect_to_this_=Open a new account",
+            "mode": "query"
+          },
+          "label": "Open a new account"
+        },
+        {
+          "id": "72ed9afe98054bcab3963ae57d577c42",
+          "edgeType": "Branch",
+          "source": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "target": "7c6fea1fa73d440a8109a9ab355b539e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.which_account_should_we_connect_to_this_=****-****-0001 (Checking)^ORvaInputs.which_account_should_we_connect_to_this_=****-****-0002 (Savings)",
+            "mode": "query"
+          },
+          "label": "Connect to existing card"
+        },
+        {
+          "id": "588cf574f1864e76b363c96fba0a98b8",
+          "edgeType": "Edge",
+          "source": "f9896870fd724556886f24f2117bc3bf",
+          "target": "6b9ff89b98e642be8df42da1f3dded24",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4e13f66f32434bffbb2080d089077f36",
+          "edgeType": "Edge",
+          "source": "6b9ff89b98e642be8df42da1f3dded24",
+          "target": "86986339d8cc4581930104677b406188",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c1b89c1faadb4453bb3d2861aa0977d8",
+          "edgeType": "Edge",
+          "source": "7c6fea1fa73d440a8109a9ab355b539e",
+          "target": "c55909f4df244e00b1a095968971a0d3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ced5f3b5fb994eb39fd43936faf68268",
+          "edgeType": "Edge",
+          "source": "c55909f4df244e00b1a095968971a0d3",
+          "target": "e0596cddb972421b8735e0dbcd9cc486",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "15a1dc1f13264301b2e06388ef1e8dc7",
+          "edgeType": "Edge",
+          "source": "e0596cddb972421b8735e0dbcd9cc486",
+          "target": "43817872cc7047c5bc0016002126963c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c275096116ca4118b1aca8a2211cad2c",
+          "edgeType": "Edge",
+          "source": "43817872cc7047c5bc0016002126963c",
+          "target": "e4ae06f772b14947ab72f8b0d6076ae5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d98bced9ac07407ca94e3fdc90652fb4",
+          "edgeType": "Branch",
+          "source": "e4ae06f772b14947ab72f8b0d6076ae5",
+          "target": "f643725ee54e4171924c70c6c0032a16",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.anything_else=No, thank you",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "3526a4cee9744c68ba4f407cd299dd3d",
+          "edgeType": "Branch",
+          "source": "e4ae06f772b14947ab72f8b0d6076ae5",
+          "target": "10eef7d9125840228ccac5ffa1a39280",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.anything_else=Yes, learn more",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "d5a40b907eb44dcbaf8f250322fe2f2e",
+          "edgeType": "Edge",
+          "source": "10eef7d9125840228ccac5ffa1a39280",
+          "target": "f643725ee54e4171924c70c6c0032a16",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "55648866299f4e87be6b532a35a9bf3d": {
+      "id": "55648866299f4e87be6b532a35a9bf3d",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": null
+      },
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "e19e8f3210ab4453b3c42bb3bb5bfda1": {
+      "id": "e19e8f3210ab4453b3c42bb3bb5bfda1",
+      "name": "which_account_should_we_connect_to_this_",
+      "label": "Which Account Should We Connect To This ",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "****-****-0001 (Checking)",
+          "value": "****-****-0001 (Checking)"
+        },
+        {
+          "label": "****-****-0002 (Saving)",
+          "value": "****-****-0002 (Savings)"
+        },
+        {
+          "label": "Open a new account",
+          "value": "Open a new account",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "58263c8106704e1abe0295a52dac19f3",
+      "isHidden": false
+    },
+    "fe81ba7cfd7148428f42da6745e43c81": {
+      "id": "fe81ba7cfd7148428f42da6745e43c81",
+      "name": "what_type_of_account_would_you_like_to_o",
+      "label": "What Type Of Account Would You Like To O",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Checking",
+          "value": "Checking"
+        },
+        {
+          "label": "Savings",
+          "value": "Savings"
+        },
+        {
+          "label": "Investment",
+          "value": "Investment",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "f9896870fd724556886f24f2117bc3bf",
+      "isHidden": false
+    },
+    "678b295e1a7e438a944e2a7bce0eef7f": {
+      "id": "678b295e1a7e438a944e2a7bce0eef7f",
+      "name": "keep_or_replace",
+      "label": "Keep Or Replace",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Replace existing debit card with new card",
+          "value": "Replace existing debit card with new card"
+        },
+        {
+          "label": "Keep existing card, get new card",
+          "value": "Keep existing card, get new card"
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "7c6fea1fa73d440a8109a9ab355b539e",
+      "isHidden": false
+    },
+    "ba360df9be5b4cccbe9b1ea795f461ac": {
+      "id": "ba360df9be5b4cccbe9b1ea795f461ac",
+      "name": "are_you_sure_to_open_a_new_account",
+      "label": "Are You Sure To Open A New Account",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs",
+      "nodeId": "6b9ff89b98e642be8df42da1f3dded24",
+      "isHidden": false
+    },
+    "df52ef361b9f443fad480024f58fa28e": {
+      "id": "df52ef361b9f443fad480024f58fa28e",
+      "name": "anything_else",
+      "label": "Anything Else",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Yes, learn more",
+          "value": "Yes, learn more"
+        },
+        {
+          "label": "No, thank you",
+          "value": "No, thank you"
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "43817872cc7047c5bc0016002126963c",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <key_phrases>New debit card</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>New debit card</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 02:34:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1df8510983369610a805f629feaad39f</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>New debit card</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cb_topic_1df8510983369610a805f629feaad39f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 06:59:46</sys_updated_on>
+        <title>New debit card for Demo</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=1df8510983369610a805f629feaad39f"/>
+</record_update>

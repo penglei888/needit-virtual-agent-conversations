@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="New debit card">5a764649837a9610a805f629feaad3fd</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"048a3b5d31d741a49f6fa10d0e8b5390","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"048a3b5d31d741a49f6fa10d0e8b5390"}],"goals":[{"name":"primary","trigger_id":"048a3b5d31d741a49f6fa10d0e8b5390","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"I can help you apply for a debit card!\", vaContext.getRequesterLang())"},"id":"b8eabb76b27948939eb148887666ab88","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f643725ee54e4171924c70c6c0032a16","name":"End","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"58263c8106704e1abe0295a52dac19f3","name":"Which account should we connect to this ","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"e19e8f3210ab4453b3c42bb3bb5bfda1","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"va:topic:1df8510983369610a805f629feaad39f:node:58263c8106704e1abe0295a52dac19f3:field:Message\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Always","expression":{"type":"Applicability","mode":"query","value":""},"id":"c0801d4074914479a0f645a41a9056e4","name":"Always","expert_mode":false},{"type":"Branch","label":"Always","expression":{"type":"Applicability","mode":"query","value":""},"id":"a90f9d3875a44fd6bdc9447931a38b5b","name":"Always","expert_mode":false},{"type":"Branch","label":"Open a new account","expression":{"type":"Applicability","mode":"query","value":"which_account_should_we_connect_to_this_=Open a new account"},"id":"d0b6d6adf816469ca9b38db18d8b24b3","name":"Open a new account","expert_mode":false}],"id":"49cb8d5bbae74536a8ce3ebf176c7f0c","goal_id":"primary","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","id":"0a746a922b6847759b61a1a68a161938","name":"ImplicitEnd__8281bfed85914b3fa35b9d319653020a","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","id":"eed6d9e1f4474168939b67df13c8f0fc","name":"ImplicitEnd__ce8cc45d6bee4593819ac958755ffbf1","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"f9896870fd724556886f24f2117bc3bf","name":"What type of account would you like to o","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"fe81ba7cfd7148428f42da6745e43c81","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What type of account would you like to open?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"va:topic:1df8510983369610a805f629feaad39f:node:26c4c0b152d74126b9a3a04456020655:field:0\", vaContext.getRequesterLang())"}],"request_feedback":true,"id":"26c4c0b152d74126b9a3a04456020655","name":"Your account","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false}],"edges":[{"type":"Edge","source_node_id":"b8eabb76b27948939eb148887666ab88","target_node_id":"58263c8106704e1abe0295a52dac19f3","id":"894ec6158cba41b5b4ebd85bd047d821"},{"type":"Edge","source_node_id":"58263c8106704e1abe0295a52dac19f3","target_node_id":"49cb8d5bbae74536a8ce3ebf176c7f0c","id":"a9ff72c362f44cfbbd981d01220fcccc"},{"type":"Edge","source_node_id":"49cb8d5bbae74536a8ce3ebf176c7f0c","target_node_id":"0a746a922b6847759b61a1a68a161938","branch_id":"c0801d4074914479a0f645a41a9056e4","id":"72ed9afe98054bcab3963ae57d577c42","name":"c0801d4074914479a0f645a41a9056e4"},{"type":"Edge","source_node_id":"49cb8d5bbae74536a8ce3ebf176c7f0c","target_node_id":"eed6d9e1f4474168939b67df13c8f0fc","branch_id":"a90f9d3875a44fd6bdc9447931a38b5b","id":"c3fec8f5b51b41c4a306a97fd3bc80ce","name":"a90f9d3875a44fd6bdc9447931a38b5b"},{"type":"Edge","source_node_id":"49cb8d5bbae74536a8ce3ebf176c7f0c","target_node_id":"f9896870fd724556886f24f2117bc3bf","branch_id":"d0b6d6adf816469ca9b38db18d8b24b3","id":"d26048de58a548d5aab0ef58fefc8901","name":"d0b6d6adf816469ca9b38db18d8b24b3"},{"type":"Edge","source_node_id":"f9896870fd724556886f24f2117bc3bf","target_node_id":"26c4c0b152d74126b9a3a04456020655","id":"588cf574f1864e76b363c96fba0a98b8"},{"type":"Edge","source_node_id":"26c4c0b152d74126b9a3a04456020655","target_node_id":"f643725ee54e4171924c70c6c0032a16","id":"950adab38622406c963e661ed6125dcf"}],"id":"primary"}],"script_variables":[{"type":"String","name":"LiveAgent_application","value":{"type":"String","mode":"string"},"list":false,"id":"55648866299f4e87be6b532a35a9bf3d","formatType":"text","secure":false,"sensitive":false,"aiInput":false}],"glide_variables":[{"type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Choice","choices":[{"name":"****-****-0001 (Checking)","element":"Checking"},{"name":"****-****-0002 (Savings)","element":"Savings"},{"name":"Open a new account","element":"Open a new account"}],"id":"e19e8f3210ab4453b3c42bb3bb5bfda1","name":"which_account_should_we_connect_to_this_","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Which Account Should We Connect To This "},{"type":"Choice","choices":[{"name":"Checking","element":"Checking"},{"name":"Savings","element":"Savings"},{"name":"Investment","element":"Investment"}],"id":"fe81ba7cfd7148428f42da6745e43c81","name":"what_type_of_account_would_you_like_to_o","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"What Type Of Account Would You Like To O"}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"b7197423836a1210a805f629feaad32c","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"1df8510983369610a805f629feaad39f","name":"New debit card","key_phrases":["New debit card"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[{"name":null,"visible":false,"sysId":"9759302b836a1210a805f629feaad321"}],"triggerable_by_notification":false,"description":"New debit card for demo","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"New debit card","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>1df8510983369610a805f629feaad39f</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.68",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b8eabb76b27948939eb148887666ab88": {
+          "id": "b8eabb76b27948939eb148887666ab88",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you apply for a debit card!"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "f643725ee54e4171924c70c6c0032a16": {
+          "id": "f643725ee54e4171924c70c6c0032a16",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "58263c8106704e1abe0295a52dac19f3": {
+          "name": "Which account should we connect to this ",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Let's get you a new debit card.  Which account should we connect to this card?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "e19e8f3210ab4453b3c42bb3bb5bfda1",
+          "detailDescription": "",
+          "id": "58263c8106704e1abe0295a52dac19f3",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "49cb8d5bbae74536a8ce3ebf176c7f0c": {
+          "id": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "0a746a922b6847759b61a1a68a161938": {
+          "id": "0a746a922b6847759b61a1a68a161938",
+          "stepType": "ImplicitEnd"
+        },
+        "eed6d9e1f4474168939b67df13c8f0fc": {
+          "id": "eed6d9e1f4474168939b67df13c8f0fc",
+          "stepType": "ImplicitEnd"
+        },
+        "f9896870fd724556886f24f2117bc3bf": {
+          "name": "What type of account would you like to o",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What type of account would you like to open?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "fe81ba7cfd7148428f42da6745e43c81",
+          "detailDescription": "",
+          "id": "f9896870fd724556886f24f2117bc3bf",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "26c4c0b152d74126b9a3a04456020655": {
+          "id": "26c4c0b152d74126b9a3a04456020655",
+          "stepType": "TextOutput",
+          "name": "Your account",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Your account has been opened!"
+                    }
+                  ]
+                },
+                {
+                  "type": "p",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "p",
+                  "children": [
+                    {
+                      "text": "Account type: "
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.what_type_of_account_would_you_like_to_o}}",
+                        "displayValue": "Input Variables➛What Type Of Account Would You Like To O"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "p",
+                  "children": [
+                    {
+                      "text": "Account number: 1259289656"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "b78f1e0de80b4744a2112e63e2e899d3"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "894ec6158cba41b5b4ebd85bd047d821",
+          "edgeType": "Edge",
+          "source": "b8eabb76b27948939eb148887666ab88",
+          "target": "58263c8106704e1abe0295a52dac19f3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a9ff72c362f44cfbbd981d01220fcccc",
+          "edgeType": "Edge",
+          "source": "58263c8106704e1abe0295a52dac19f3",
+          "target": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "72ed9afe98054bcab3963ae57d577c42",
+          "edgeType": "Branch",
+          "source": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "target": "0a746a922b6847759b61a1a68a161938",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "c3fec8f5b51b41c4a306a97fd3bc80ce",
+          "edgeType": "Branch",
+          "source": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "target": "eed6d9e1f4474168939b67df13c8f0fc",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "d26048de58a548d5aab0ef58fefc8901",
+          "edgeType": "Branch",
+          "source": "49cb8d5bbae74536a8ce3ebf176c7f0c",
+          "target": "f9896870fd724556886f24f2117bc3bf",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.which_account_should_we_connect_to_this_=Open a new account",
+            "mode": "query"
+          },
+          "label": "Open a new account"
+        },
+        {
+          "id": "588cf574f1864e76b363c96fba0a98b8",
+          "edgeType": "Edge",
+          "source": "f9896870fd724556886f24f2117bc3bf",
+          "target": "26c4c0b152d74126b9a3a04456020655",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "950adab38622406c963e661ed6125dcf",
+          "edgeType": "Edge",
+          "source": "26c4c0b152d74126b9a3a04456020655",
+          "target": "f643725ee54e4171924c70c6c0032a16",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "55648866299f4e87be6b532a35a9bf3d": {
+      "id": "55648866299f4e87be6b532a35a9bf3d",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": null
+      },
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "e19e8f3210ab4453b3c42bb3bb5bfda1": {
+      "id": "e19e8f3210ab4453b3c42bb3bb5bfda1",
+      "name": "which_account_should_we_connect_to_this_",
+      "label": "Which Account Should We Connect To This ",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "****-****-0001 (Checking)",
+          "value": "Checking"
+        },
+        {
+          "label": "****-****-0002 (Savings)",
+          "value": "Savings"
+        },
+        {
+          "label": "Open a new account",
+          "value": "Open a new account",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "58263c8106704e1abe0295a52dac19f3",
+      "isHidden": false
+    },
+    "fe81ba7cfd7148428f42da6745e43c81": {
+      "id": "fe81ba7cfd7148428f42da6745e43c81",
+      "name": "what_type_of_account_would_you_like_to_o",
+      "label": "What Type Of Account Would You Like To O",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Checking",
+          "value": "Checking"
+        },
+        {
+          "label": "Savings",
+          "value": "Savings"
+        },
+        {
+          "label": "Investment",
+          "value": "Investment",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "f9896870fd724556886f24f2117bc3bf",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>New debit card</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 05:52:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1e760e49837a9610a805f629feaad3b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cb_design_topic_1e760e49837a9610a805f629feaad3b6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 05:52:57</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

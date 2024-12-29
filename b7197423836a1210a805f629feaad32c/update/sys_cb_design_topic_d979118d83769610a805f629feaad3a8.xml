@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__83821a50b5f3410e861ce62b4cb528cb">5979118d83769610a805f629feaad3a2</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"d8951fe4701a4672b42db3920e286233","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"d8951fe4701a4672b42db3920e286233"}],"goals":[{"name":"primary","trigger_id":"d8951fe4701a4672b42db3920e286233","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"I can help you apply for a student loan!\", vaContext.getRequesterLang())"},"id":"b8eabb76b27948939eb148887666ab88","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f643725ee54e4171924c70c6c0032a16","name":"End","expert_mode":false}],"edges":[{"type":"Edge","source_node_id":"b8eabb76b27948939eb148887666ab88","target_node_id":"f643725ee54e4171924c70c6c0032a16","id":"894ec6158cba41b5b4ebd85bd047d821"}],"id":"primary"}],"script_variables":[{"type":"String","name":"LiveAgent_application","value":{"type":"String","mode":"string"},"list":false,"id":"55648866299f4e87be6b532a35a9bf3d","formatType":"text","secure":false,"sensitive":false,"aiInput":false}],"glide_variables":[{"type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"b7197423836a1210a805f629feaad32c","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"1df8510983369610a805f629feaad39f","name":"_PRVW__83821a50b5f3410e861ce62b4cb528cb","key_phrases":["Applying for a student loan","loan","apply"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[{"name":null,"visible":false,"sysId":"9759302b836a1210a805f629feaad321"}],"triggerable_by_notification":false,"description":"Applying for a student loan for demo","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Applying for a student loan","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>1df8510983369610a805f629feaad39f</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.68",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b8eabb76b27948939eb148887666ab88": {
+          "id": "b8eabb76b27948939eb148887666ab88",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you apply for a student loan!"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "f643725ee54e4171924c70c6c0032a16": {
+          "id": "f643725ee54e4171924c70c6c0032a16",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "894ec6158cba41b5b4ebd85bd047d821",
+          "edgeType": "Edge",
+          "source": "b8eabb76b27948939eb148887666ab88",
+          "target": "f643725ee54e4171924c70c6c0032a16",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <name>_PRVW__83821a50b5f3410e861ce62b4cb528cb</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 02:36:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d979118d83769610a805f629feaad3a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cb_design_topic_d979118d83769610a805f629feaad3a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 02:36:17</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

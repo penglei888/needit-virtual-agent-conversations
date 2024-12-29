@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>replace existing debit card with new card</key>
+        <language>en</language>
+        <message>Replace existing debit card with new card</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 06:08:55</sys_created_on>
+        <sys_id>442ac2c9837a9610a805f629feaad311</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>replace existing debit card with new card</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_ui_message_442ac2c9837a9610a805f629feaad311</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 06:08:55</sys_updated_on>
+    </sys_ui_message>
+</record_update>

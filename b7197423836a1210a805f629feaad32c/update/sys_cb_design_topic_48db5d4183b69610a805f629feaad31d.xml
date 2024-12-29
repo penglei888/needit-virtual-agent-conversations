@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__69c3c62be5314670858aa5ef1cc6f813">48db5d4183b69610a805f629feaad31a</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"cb459a11d0a14e0d87d613b897067ed7","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"cb459a11d0a14e0d87d613b897067ed7"}],"goals":[{"name":"primary","trigger_id":"cb459a11d0a14e0d87d613b897067ed7","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"I can help you apply for a student loan!\", vaContext.getRequesterLang())"},"id":"b8eabb76b27948939eb148887666ab88","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"f643725ee54e4171924c70c6c0032a16","name":"End","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Tuition and other education expenses can be high, so we partnered with Sallie Mae to offer Lendyr members our Student Loan.  This loan is an ideal solution to help you pay for college expenses not covered by scholarships and federal loans.\", vaContext.getRequesterLang())"}],"request_feedback":true,"id":"62a8baaabe1542a5928bf8e01de66342","name":"step1","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"InputPrompt","variable_id":"1eeffb51689240bba9b72cf41cabf811","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Are you interested in applying for a student loan?\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"862d160ffc594624be75e6adfe9c8f59","name":"step2","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"description":""},{"type":"TerminateGoal","goal_id":"primary","id":"af4bef907bae48c3bd7a8db15dc02fc9","name":"ImplicitEnd__1998bb8a8b0c458aaf8c441e4f48be7f","expert_mode":false},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"step2=false"},"id":"422d1c7a56504a7590056e4cdbb6b31d","name":"Yes","expert_mode":false},{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"step2=true"},"id":"6f9b88ede0ee405eb88bb77deb296a8a","name":"No","expert_mode":false}],"id":"8987f3b0c154431194ef8dcab426db1e","goal_id":"primary","expert_mode":false},{"type":"InputPrompt","variable_id":"ee8d9da850c44af8b71c8717e5e1c797","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"No worries. Let me know if I can help with anything else.\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"id":"457b5e9e25934b8fbfa888ab2a8bbcef","name":"step2No","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""}],"edges":[{"type":"Edge","source_node_id":"62a8baaabe1542a5928bf8e01de66342","target_node_id":"862d160ffc594624be75e6adfe9c8f59","id":"ae55c8f8dca34088a0301ca6494f5d9b"},{"type":"Edge","source_node_id":"8987f3b0c154431194ef8dcab426db1e","target_node_id":"af4bef907bae48c3bd7a8db15dc02fc9","branch_id":"422d1c7a56504a7590056e4cdbb6b31d","id":"4497d548b05d401db739404a69371e6a","name":"422d1c7a56504a7590056e4cdbb6b31d"},{"type":"Edge","source_node_id":"b8eabb76b27948939eb148887666ab88","target_node_id":"62a8baaabe1542a5928bf8e01de66342","id":"894ec6158cba41b5b4ebd85bd047d821"},{"type":"Edge","source_node_id":"862d160ffc594624be75e6adfe9c8f59","target_node_id":"8987f3b0c154431194ef8dcab426db1e","id":"adfb6e6160d34793a09bfe66379a8a0b"},{"type":"Edge","source_node_id":"8987f3b0c154431194ef8dcab426db1e","target_node_id":"457b5e9e25934b8fbfa888ab2a8bbcef","branch_id":"6f9b88ede0ee405eb88bb77deb296a8a","id":"1fdb0edbcfc846ac9258c9cf53be828d","name":"6f9b88ede0ee405eb88bb77deb296a8a"},{"type":"Edge","source_node_id":"457b5e9e25934b8fbfa888ab2a8bbcef","target_node_id":"f643725ee54e4171924c70c6c0032a16","id":"bfdf3e5695354f11b1229570d58bdf34"}],"id":"primary"}],"script_variables":[{"type":"String","name":"LiveAgent_application","value":{"type":"String","mode":"string"},"list":false,"id":"55648866299f4e87be6b532a35a9bf3d","formatType":"text","secure":false,"sensitive":false,"aiInput":false}],"glide_variables":[{"type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"True/False","id":"1eeffb51689240bba9b72cf41cabf811","name":"step2","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"step2no","list":false,"id":"ee8d9da850c44af8b71c8717e5e1c797","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"b7197423836a1210a805f629feaad32c","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"1df8510983369610a805f629feaad39f","name":"_PRVW__69c3c62be5314670858aa5ef1cc6f813","key_phrases":["Applying for a student loan","loan","apply"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[{"name":null,"visible":false,"sysId":"9759302b836a1210a805f629feaad321"}],"triggerable_by_notification":false,"description":"Applying for a student loan for demo","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Applying for a student loan","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>1df8510983369610a805f629feaad39f</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.68",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b8eabb76b27948939eb148887666ab88": {
+          "id": "b8eabb76b27948939eb148887666ab88",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "I can help you apply for a student loan!"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "f643725ee54e4171924c70c6c0032a16": {
+          "id": "f643725ee54e4171924c70c6c0032a16",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "62a8baaabe1542a5928bf8e01de66342": {
+          "id": "62a8baaabe1542a5928bf8e01de66342",
+          "stepType": "TextOutput",
+          "name": "step1",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Tuition and other education expenses can be high, so we partnered with Sallie Mae to offer Lendyr members our Student Loan.  This loan is an ideal solution to help you pay for college expenses not covered by scholarships and federal loans."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "81fe82c7de0e4f1eba7951ac7ddc0110"
+            }
+          ],
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "862d160ffc594624be75e6adfe9c8f59": {
+          "id": "862d160ffc594624be75e6adfe9c8f59",
+          "stepType": "BooleanPrompt",
+          "name": "step2",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Are you interested in applying for a student loan?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "1eeffb51689240bba9b72cf41cabf811",
+          "detailDescription": ""
+        },
+        "af4bef907bae48c3bd7a8db15dc02fc9": {
+          "id": "af4bef907bae48c3bd7a8db15dc02fc9",
+          "stepType": "ImplicitEnd"
+        },
+        "8987f3b0c154431194ef8dcab426db1e": {
+          "id": "8987f3b0c154431194ef8dcab426db1e",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "457b5e9e25934b8fbfa888ab2a8bbcef": {
+          "id": "457b5e9e25934b8fbfa888ab2a8bbcef",
+          "stepType": "TextPrompt",
+          "name": "step2No",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No worries. Let me know if I can help with anything else."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "ee8d9da850c44af8b71c8717e5e1c797",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        }
+      },
+      "edges": [
+        {
+          "id": "ae55c8f8dca34088a0301ca6494f5d9b",
+          "edgeType": "Edge",
+          "source": "62a8baaabe1542a5928bf8e01de66342",
+          "target": "862d160ffc594624be75e6adfe9c8f59",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "4497d548b05d401db739404a69371e6a",
+          "edgeType": "Branch",
+          "source": "8987f3b0c154431194ef8dcab426db1e",
+          "target": "af4bef907bae48c3bd7a8db15dc02fc9",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.step2=false",
+            "mode": "query"
+          },
+          "label": "Yes"
+        },
+        {
+          "id": "894ec6158cba41b5b4ebd85bd047d821",
+          "edgeType": "Edge",
+          "source": "b8eabb76b27948939eb148887666ab88",
+          "target": "62a8baaabe1542a5928bf8e01de66342",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "adfb6e6160d34793a09bfe66379a8a0b",
+          "edgeType": "Edge",
+          "source": "862d160ffc594624be75e6adfe9c8f59",
+          "target": "8987f3b0c154431194ef8dcab426db1e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1fdb0edbcfc846ac9258c9cf53be828d",
+          "edgeType": "Branch",
+          "source": "8987f3b0c154431194ef8dcab426db1e",
+          "target": "457b5e9e25934b8fbfa888ab2a8bbcef",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.step2=true",
+            "mode": "query"
+          },
+          "label": "No"
+        },
+        {
+          "id": "bfdf3e5695354f11b1229570d58bdf34",
+          "edgeType": "Edge",
+          "source": "457b5e9e25934b8fbfa888ab2a8bbcef",
+          "target": "f643725ee54e4171924c70c6c0032a16",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "55648866299f4e87be6b532a35a9bf3d": {
+      "id": "55648866299f4e87be6b532a35a9bf3d",
+      "name": "LiveAgent_application",
+      "value": {
+        "mode": "simple",
+        "value": null
+      },
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "1eeffb51689240bba9b72cf41cabf811": {
+      "id": "1eeffb51689240bba9b72cf41cabf811",
+      "name": "step2",
+      "label": "Step2",
+      "varType": "boolean",
+      "secure": false,
+      "category": "vaInputs",
+      "nodeId": "862d160ffc594624be75e6adfe9c8f59",
+      "isHidden": false
+    },
+    "ee8d9da850c44af8b71c8717e5e1c797": {
+      "id": "ee8d9da850c44af8b71c8717e5e1c797",
+      "name": "step2no",
+      "label": "Step2No",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTczNTQ0MDM2OTMxNCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "457b5e9e25934b8fbfa888ab2a8bbcef",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>_PRVW__69c3c62be5314670858aa5ef1cc6f813</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-29 02:46:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>48db5d4183b69610a805f629feaad31d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_1550946_needit_v">b7197423836a1210a805f629feaad32c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">b7197423836a1210a805f629feaad32c</sys_scope>
+        <sys_update_name>sys_cb_design_topic_48db5d4183b69610a805f629feaad31d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-29 02:46:34</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>
